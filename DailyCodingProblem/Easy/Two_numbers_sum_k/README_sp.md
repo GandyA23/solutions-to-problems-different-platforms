@@ -1,15 +1,15 @@
-## Level: Easy
+## Nivel: Fácil
 
-# Description
+# Descripción
 
-Given a list of numbers and a number `k`, return whether any two numbers from the list add up to `k`.
+Dada una lista de números y un número `k`, devuelva si dos números cualesquiera de la lista suman `k`.
 
-For example, given `[10, 15, 3, 7]` and `k = 17`, return `true` since `10 + 7 = 17`.
+Por ejemplo, dado `[10, 15, 3, 7]` y `k = 17`, devuelve verdadero ya que `10 + 7 = 17`.
 
-#Solution
-This problem can be solved in several different ways.
+# Solución 
+Este problema puede resolverse de diferentes maneras.
 
-Brute force way would involve a nested iteration to check for every pair of numbers:
+La solución con la fuerza bruta implicaría una iteración anidada para verificar cada par de números:
 
 ```cpp
 bool twoSum (int arr[], int n, int k) {
@@ -27,8 +27,7 @@ bool twoSum (int arr[], int n, int k) {
 }
 ```
 
-This would take `O(N*N)`. Another way is to use a set to remember the numbers we've seen so far. Then for a given number, we can check if there is another number that, if added, would sum to `k`. This would be `O(N)` since lookups of sets are `O(1)` each.
-
+Esto tomaría `O(N*N)`. Otra forma es usar un set para recordar los números que hemos visto hasta ahora. Luego, para un número dado, podemos verificar si hay otro número que, si se suma, sumaría `k`. Esto sería `O(N)` ya que las búsquedas de conjuntos son `O(1)` cada una.
 
 ```cpp
 set<int> numbers ;
@@ -49,7 +48,7 @@ bool twoSum (int arr[], int n, int k) {
 }
 ```
 
-Yet another solution involves sorting the list. We can then iterate through the list and run a binary search on `K - arr[i]`. Since we run binary search on `N` elements, this would take `O(N log N)` with `O(1)` space.
+Otra solución más consiste en ordenar la lista. Luego podemos iterar a través de la lista y ejecutar una búsqueda binaria en `k - arr[i]`. Dado que ejecutamos una búsqueda binaria en `N` elementos, esto tomaría `O(N log N)` con `O(1)` espacio. 
 
 ```cpp
 bool binarySearch (int arr[], int n, int x) {

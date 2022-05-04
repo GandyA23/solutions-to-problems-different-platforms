@@ -2,3 +2,7 @@ run
 run.*
 *.sh
 *.exe
+
+# Code Editor Folders
+.idea
+.vscode

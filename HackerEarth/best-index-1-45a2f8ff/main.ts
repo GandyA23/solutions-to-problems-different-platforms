@@ -1,3 +1,6 @@
+// URL Problem
+// https://www.hackerearth.com/practice/basic-programming/input-output/basics-of-input-output/practice-problems/algorithm/best-index-1-45a2f8ff/
+
 class SpecialSum
 {
     constructor(public total: number, public index: number) {}
@@ -38,7 +41,6 @@ function nextSum(): void
 
 function main(dataStr: string) : number
 {
-    let answ: number = Number.MIN_SAFE_INTEGER
     const data: Array<string> = dataStr.split("\n")
 
     n = parseInt(data[0])
@@ -61,7 +63,7 @@ function main(dataStr: string) : number
         sums.push(new SpecialSum(total, j-1))
         
         last = sums[i-1].index + 1
-        i++;
+        i++
     }
 
     while (sums.length > 0)

@@ -18,7 +18,7 @@ function main(dataStr: string) : number
             
         // 0: the lowest cost ballon
         // 1: the gratest cost ballon
-        let costBallons: Array<number> = data[index++].split(" ").map((x: string) => parseInt(x)).sort()
+        let costBallons: Array<number> = data[index++].split(" ").map((x: string) => parseInt(x)).sort((a, b) => a - b)
         let statusUsers: number = parseInt(data[index++])
  
         while(statusUsers-- > 0)
